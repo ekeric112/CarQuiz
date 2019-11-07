@@ -17,6 +17,10 @@ public class Main {
     public static final int CAR_COL = 3;
 
     public static void main(String[] args) {
+        carQuiz();
+    }
+
+    static void carQuiz(){
         int counter = 0, carType = -1, carBrand = -1, carTypeAndBrand, carSize = -1;
         String ans, car, carCompany = "";
         Scanner in = new Scanner(System.in);

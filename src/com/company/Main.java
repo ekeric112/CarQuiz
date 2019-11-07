@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -16,8 +17,9 @@ public class Main {
     public static final int CAR_ROW = 12;
     public static final int CAR_COL = 3;
 
-    public static void main(String[] args) {
-        carQuiz();
+    public static void main(String[] args) throws IOException {
+        StartMenu menu = new StartMenu();
+//        carQuiz();
     }
 
     static void carQuiz(){

@@ -2,6 +2,8 @@ package com.company;
 
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +19,7 @@ public class Main {
     public static final int CAR_ROW = 12;
     public static final int CAR_COL = 3;
 
+
     public static void main(String[] args) throws IOException {
         StartMenu menu = new StartMenu();
 //        carQuiz();
@@ -24,6 +27,7 @@ public class Main {
 
     static void carQuiz(){
         int counter = 0, carType = -1, carBrand = -1, carTypeAndBrand, carSize = -1;
+        Map<String, String> carMap;
         String ans, car, carCompany = "";
         Scanner in = new Scanner(System.in);
         // write your code here
@@ -37,6 +41,7 @@ public class Main {
         }
         //initialize 2D array of cars
         String [][] carTable = makeCarTable();
+        carMap = makeCarMap(carTable);
 
         //Ask the user the questions
         System.out.println("Would you like a A)2 door B)4 door sedan C)SUV:");
@@ -113,6 +118,60 @@ public class Main {
 
     static void setItem(String[][] table, int row, int col, String item){
         table[row][col] = item;
+    }
+
+
+    static Map<String, String> makeCarMap(String[][] carTable){
+        Map<String, String> carMap = new HashMap<String, String>();
+        carMap.put(carTable[0][0], "https://www.mbusa.com/en/vehicles/model/c-class/coupe/c63cs");
+        carMap.put(carTable[0][1], "https://www.mbusa.com/en/vehicles/model/e-class/coupe/e53c4");
+        carMap.put(carTable[0][2], "https://www.mbusa.com/en/vehicles/model/gt/coupe/gtr");
+
+        carMap.put(carTable[1][0], "https://www.mbusa.com/en/vehicles/class/a-class/sedan");
+        carMap.put(carTable[1][1], "https://www.mbusa.com/en/vehicles/class/e-class/sedan");
+        carMap.put(carTable[1][2], "https://www.mbusa.com/en/vehicles/class/s-class/sedan");
+
+        carMap.put(carTable[2][0], "https://www.mbusa.com/en/vehicles/class/glc/suv");
+        carMap.put(carTable[2][1], "https://www.mbusa.com/en/vehicles/class/gle/suv");
+        carMap.put(carTable[2][2], "https://www.mbusa.com/en/vehicles/class/g-class/suv");
+
+        carMap.put(carTable[3][0], "https://www.audiusa.com/models/audi-tt-rs");
+        carMap.put(carTable[3][1], "https://www.audiusa.com/models/audi-rs5-coupe");
+        carMap.put(carTable[3][2], "https://www.audiusa.com/models/audi-r8");
+
+        carMap.put(carTable[4][0], "https://www.audiusa.com/models/audi-s3-sedan");
+        carMap.put(carTable[4][1], "https://www.audiusa.com/models/audi-rs5-sportback");
+        carMap.put(carTable[4][2], "https://www.audiusa.com/models/audi-s8");
+
+        carMap.put(carTable[5][0], "https://www.audiusa.com/models/audi-q3");
+        carMap.put(carTable[5][1], "https://www.audiusa.com/models/audi-sq5");
+        carMap.put(carTable[5][2], "https://www.audiusa.com/models/audi-q8");
+
+        carMap.put(carTable[6][0], "https://www.bmwusa.com/vehicles/2-series/m2-competition/overview.html");
+        carMap.put(carTable[6][1], "https://www.bmwusa.com/vehicles/4-series/m4/overview.html");
+        carMap.put(carTable[6][2], "https://www.bmwusa.com/vehicles/m-models/m8-coupe/overview.html");
+
+        carMap.put(carTable[7][0], "https://www.bmwusa.com/vehicles/3-series/sedan/overview.html");
+        carMap.put(carTable[7][1], "https://www.bmwusa.com/vehicles/5-series/sedan/overview.html");
+        carMap.put(carTable[7][2], "https://www.bmwusa.com/vehicles/7-series/sedan/overview.html");
+
+        carMap.put(carTable[8][0], "https://www.bmwusa.com/vehicles/x-models/x2/sports-activity-coupe/overview.html");
+        carMap.put(carTable[8][1], "https://www.bmwusa.com/vehicles/x-models/x4/sports-activity-coupe/overview.html");
+        carMap.put(carTable[8][2], "https://www.bmwusa.com/vehicles/x-models/x7/sports-activity-vehicle/overview.html");
+
+        carMap.put(carTable[9][0], "https://www.lexus.com/models/RCF");
+        carMap.put(carTable[9][1], "https://www.lexus.com/models/LC");
+        carMap.put(carTable[9][2], "");
+
+        carMap.put(carTable[10][0], "");
+        carMap.put(carTable[10][1], "");
+        carMap.put(carTable[10][2], "");
+
+        carMap.put(carTable[11][0], "");
+        carMap.put(carTable[11][1], "");
+        carMap.put(carTable[11][2], "");
+
+        return carMap;
     }
 
     static String[][] makeCarTable(){

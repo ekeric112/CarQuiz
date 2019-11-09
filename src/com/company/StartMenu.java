@@ -27,7 +27,7 @@ public class StartMenu extends JFrame {
         startMenu = new JPanel(new BorderLayout());
         btnMenu = new JPanel(new GridBagLayout());
         labelMenu = new JPanel(new GridBagLayout());
-        quizLabel = new JLabel("Your Perfect Car!");
+        quizLabel = new JLabel("Title!");
         quizLabel.setFont(new Font("Times New Roman", Font.BOLD, 48));
         startBtn = new JButton("Start Quiz");
         quitBtn = new JButton("Quit");
@@ -55,7 +55,7 @@ public class StartMenu extends JFrame {
         add(startMenu);
 
         setTitle("Car Quiz");
-        setPreferredSize(new Dimension(1600, 900));
+        setPreferredSize(new Dimension(400, 400));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);

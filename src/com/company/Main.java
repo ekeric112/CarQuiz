@@ -21,8 +21,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        StartMenu menu = new StartMenu();
-//        carQuiz();
+//        StartMenu menu = new StartMenu();
+        carQuiz();
     }
 
     static void carQuiz(){
@@ -41,7 +41,7 @@ public class Main {
         }
         //initialize 2D array of cars
         String [][] carTable = makeCarTable();
-        carMap = makeCarMap(carTable);
+        carMap = makeCarMap(carTable); //maps the car to the website
 
         //Ask the user the questions
         System.out.println("Would you like a A)2 door B)4 door sedan C)SUV:");
@@ -163,13 +163,13 @@ public class Main {
         carMap.put(carTable[9][1], "https://www.lexus.com/models/LC");
         carMap.put(carTable[9][2], "");
 
-        carMap.put(carTable[10][0], "");
-        carMap.put(carTable[10][1], "");
-        carMap.put(carTable[10][2], "");
+        carMap.put(carTable[10][0], "https://www.lexus.com/models/IS");
+        carMap.put(carTable[10][1], "https://www.lexus.com/models/ES");
+        carMap.put(carTable[10][2], "https://www.lexus.com/models/LS");
 
-        carMap.put(carTable[11][0], "");
-        carMap.put(carTable[11][1], "");
-        carMap.put(carTable[11][2], "");
+        carMap.put(carTable[11][0], "https://www.lexus.com/models/NX");
+        carMap.put(carTable[11][1], "https://www.lexus.com/models/RX");
+        carMap.put(carTable[11][2], "https://www.lexus.com/models/LX");
 
         return carMap;
     }

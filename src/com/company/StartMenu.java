@@ -72,6 +72,14 @@ public class StartMenu extends JFrame {
             }
         });
 
+        startBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                setVisible(false);
+
+            }
+        });
+
     }
 
 }

@@ -21,8 +21,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-//        StartMenu menu = new StartMenu();
-        carQuiz();
+        StartMenu menu = new StartMenu();
+//        carQuiz();
     }
 
     static void carQuiz(){
@@ -32,7 +32,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         // write your code here
         //initialize 2D array for car type and car company
-        int[][] carTypeTable = new int[CAR_TYPE_ROW][CAR_TYPE_COL];
+        int[][] carTypeTable = new int[CAR_TYPE_ROW][CAR_TYPE_COL]; //row is car brand and col is # of doors
         for (int i = 0; i < CAR_TYPE_ROW; i++) {
             for (int j = 0; j < CAR_TYPE_COL; j++) {
                 carTypeTable[i][j] = counter;
@@ -40,7 +40,7 @@ public class Main {
             }
         }
         //initialize 2D array of cars
-        String [][] carTable = makeCarTable();
+        String [][] carTable = makeCarTable(); //rows are car number, col are car size
         carMap = makeCarMap(carTable); //maps the car to the website
 
         //Ask the user the questions
